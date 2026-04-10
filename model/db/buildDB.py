@@ -38,6 +38,7 @@ def _buildTriggers():
 def _buildIndices():
     with sqlite3.connect("pask.db") as con:
         cursor = con.cursor()
+        # TODO check if this index is actually correct, shouldnt it be plot_id?
         cursor.execute('''CREATE INDEX idx_subplot_plot_id ON subplots (subplot_id);''')
         cursor.execute('''CREATE INDEX idx_tillage_subplot_id ON tillage (subplot_id);''')
         cursor.execute('''CREATE INDEX idx_sowing_subplot_id ON sowing (subplot_id);''')
@@ -52,7 +53,8 @@ def _buildViews():
 
         #cursor.execute('''
         #            CREATE VIEW vi_subplots_of_plots AS
-        #            SELECT plots.business_id, plots.flik, plots.plot_nr, subplots.plot_suffix, plots.size AS plot_size, subplots.size as subplot_size, subplots.year
+        #            SELECT plots.business_id, plots.flik, plots.plot_nr, subplots.plot_suffix, plots.size AS plot_size, subplots.size AS
+        #            subplot_size, subplots.year
         #            FROM plots
         #            INNER JOIN subplots ON subplots.plot_id = plots.plot_id;
         #        ''')

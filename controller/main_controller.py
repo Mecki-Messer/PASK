@@ -166,6 +166,9 @@ class MainController:
             id_attr_name = getattr(IDPrefix, obj_type.prefix).value
             data[id_attr_name] = self.current_id
 
+            if 'business_id' not in data:
+                data['business_id'] = self.business_id
+
             updated_obj = obj_class(**data)
             update_func(updated_obj)
 
