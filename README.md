@@ -9,6 +9,12 @@ pip install PyQt5 typing-extensions
 
 python3 main.py
 
+Wichtig
+-
+Bei Programmstart muss zunächst über das Dropdown ein betrieb gewählt werden
+Das Debug menü enthält eine Methode zum löschen und zum Befüllen der Datenbank
+Zum Export muss in der Plot Ansicht ein Eintrag ausgewählt sein
+
 
 TODOs
 -
