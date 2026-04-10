@@ -1,0 +1,6 @@
+business_id;plot_id;subplot_id;suffix;subplot_year;date;action_type;val_1;val_2;info;ref_id
+7;17;33;0;2026;2025-08-23;Aussaat;2.5;20.0;kg/ha;
+7;17;33;0;2026;2025-09-15;Bodenbearbeitung;30.0;BASE;plow;
+7;17;33;0;2026;2026-03-26;Düngung;10.0;dt/ha;;1
+7;17;33;0;2026;2026-04-07;Ernte;120.0;0.7;dt/ha;
+7;17;33;0;2026;2026-05-07;Pflanzenschutz;100.0;l/ha;;1
