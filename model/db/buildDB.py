@@ -52,7 +52,8 @@ def _buildViews():
 
         #cursor.execute('''
         #            CREATE VIEW vi_subplots_of_plots AS
-        #            SELECT plots.business_id, plots.flik, plots.plot_nr, subplots.plot_suffix, plots.size AS plot_size, subplots.size as subplot_size, subplots.year
+        #            SELECT plots.business_id, plots.flik, plots.plot_nr, subplots.plot_suffix, plots.size AS plot_size, subplots.size AS
+        #            subplot_size, subplots.year
         #            FROM plots
         #            INNER JOIN subplots ON subplots.plot_id = plots.plot_id;
         #        ''')
