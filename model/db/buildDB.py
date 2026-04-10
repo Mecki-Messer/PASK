@@ -38,6 +38,7 @@ def _buildTriggers():
 def _buildIndices():
     with sqlite3.connect("pask.db") as con:
         cursor = con.cursor()
+        # TODO check if this index is actually correct, shouldnt it be plot_id?
         cursor.execute('''CREATE INDEX idx_subplot_plot_id ON subplots (subplot_id);''')
         cursor.execute('''CREATE INDEX idx_tillage_subplot_id ON tillage (subplot_id);''')
         cursor.execute('''CREATE INDEX idx_sowing_subplot_id ON sowing (subplot_id);''')
